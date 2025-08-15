@@ -1,6 +1,5 @@
 //import the express module
 const express = require('express');
-const helloRoute = require('./routes/hello');
 const mongoose  = require('mongoose');
 
 // Define the port number the server will listen on
@@ -14,7 +13,7 @@ const DB = "mongodb+srv://sreenivasreddicherla:Sreenivas@cluster0.3bpnjsc.mongod
 //     res.send("hello world");
 // });
 //middleware to register routes or to mount routes
-app.use('/',helloRoute);
+
 mongoose.connect(DB).then(()=>{
     console.log('mongodb connected');
 });
